@@ -33,6 +33,7 @@ public class LsjarUtil {
 				  className = className.replaceAll(" ", "");
 				  className = className.replaceAll(";", "");
 				  className = className.replaceAll("\t", "");
+				  br.close();
 				  return "";
 			  }
 		  }

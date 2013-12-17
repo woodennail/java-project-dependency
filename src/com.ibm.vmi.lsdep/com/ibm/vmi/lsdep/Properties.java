@@ -15,6 +15,8 @@ public class Properties {
 	public static final String COMPONENTS="components";
 	public static final String OUPUTPATH="outputPath";
 	
+	public static ResourceBundle rsBundle=ResourceBundle.getBundle("com.ibm.vmi.lsdep.resource.lsdep");
+	
 	private ResourceBundle resourceBundle = null;
 	public Properties(String file) {
 		String proFilePath = System.getProperty("user.dir") + "\\config.properties";
@@ -28,6 +30,18 @@ public class Properties {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	public static String getResource(String key){
+		if (rsBundle==null || key == null || key.equals("") || key.equals("null")) {
+            return "";
+        }
+        String result = "";
+        try {
+            result = rsBundle.getString(key);
+        } catch (MissingResourceException e) {
+            e.printStackTrace();
+        }
+        return result;
 	}
 	public String getString(String key) {
         if (resourceBundle==null || key == null || key.equals("") || key.equals("null")) {

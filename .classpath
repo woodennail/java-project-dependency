@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-	<classpathentry excluding="com/ibm/vmi/lsjar/|com.ibm.vmi.lsjar/|com/ibm/vmi/lsdep/|com.ibm.vmi.lsdep/|com.ibm.vmi.lsdep/" kind="src" path="src"/>
-	<classpathentry kind="src" path="src/com.ibm.vmi.lsdep"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry excluding="com/ibm/vmi/lsjar/|com.ibm.vmi.lsjar/|com/ibm/vmi/lsdep/|com.ibm.vmi.lsdep/|com.ibm.vmi.lsdep/|com.ibm.vmi.lsdep/|com.ibm.vmi.lsdep/com.ibm.vmi.lsdep.resource/|com/ibm/vmi/lsdep/resource/|com.ibm.vmi.lsdep.resource/|com/ibm/vmi/javac/|com.ibm.vmi.javac/" kind="src" path="src"/>
+	<classpathentry excluding="com/ibm/vmi/lsdep/resource/|com.ibm.vmi.lsdep.resource/" kind="src" path="src/com.ibm.vmi.lsdep"/>
+	<classpathentry kind="src" path="src/com.ibm.vmi.lsdep.resource"/>
+	<classpathentry kind="src" path="src/com.ibm.vmi.javac"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="lib" path="E:/Projects/projectspace/java-project-dependency/lib/Langtools.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
