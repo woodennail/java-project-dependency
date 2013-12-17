@@ -47,21 +47,21 @@ public class RefClass2JarMap {
 			return append(path);
 		}
 	}
-	public boolean append(File file) throws IOException{ //jar file
-		String suffix = LsjarUtil.getSuffix(file);
-		String path = file.getAbsolutePath();
-		if(!suffix.equals("jar"))
-			return false;
-		JarFile jarFile=new JarFile(file);
-		Enumeration<JarEntry> entries = jarFile.entries();
-		while (entries.hasMoreElements()){
-			JarEntry ent = entries.nextElement();
-			String name = ent.getName();
-			if(name.endsWith(".class")){
-				name = name.substring(0,name.length()-6).replace('/', '.');
-				map.put(name, path);
-			}
-		}
-		return true;
-	}
+    public boolean append(File file) throws IOException{ //jar file
+        String suffix = LsjarUtil.getSuffix(file);
+        String path = file.getAbsolutePath();
+        if(!suffix.equals("jar"))
+            return false;
+        JarFile jarFile=new JarFile(file);
+        Enumeration<JarEntry> entries = jarFile.entries();
+        while (entries.hasMoreElements()){
+            JarEntry ent = entries.nextElement();
+            String name = ent.getName();
+            if(name.endsWith(".class")){
+                name = name.substring(0,name.length()-6).replace('/', '.');
+                map.put(name, path);
+            }
+        }
+        return true;
+    }
 }
